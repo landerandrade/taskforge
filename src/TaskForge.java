@@ -1,8 +1,18 @@
 // TaskForge v0 - Do Código ao Contrato
 // Código final da aula 1.2: entrada validada, status e cartão da tarefa.
 
+import src.Tarefa;
+
 void main() {
     IO.println("=== TaskForge v0 ===");
+
+    Tarefa tarefa = new Tarefa("Estudar Java", "Estudar Encapsulamento", 1,
+            "Lander Andrade", 2, 2);
+    Tarefa tarefa2 = new Tarefa("Estudar Frontend", "Estudar React", 3,
+            "Lander Andrade", 2, 1);
+
+    IO.println("Tarefa Criada: " + tarefa.getNome());
+    IO.println("Tarefa Criada: " + tarefa2.getNome());
 
     String nome = IO.readln("Nome da tarefa: ");
     String descricao = IO.readln("Descrição: ");
