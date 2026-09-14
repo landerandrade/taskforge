@@ -2,7 +2,9 @@ package src;
 
 // Aula 3.1: a unica mudanca aqui foi o STATUS, que virou enum.
 // (Classe abstrata e interface ficaram pra proxima aula.)
-public class Tarefa {
+public abstract class Tarefa {
+
+    public abstract String tipo();
 
     // ATRIBUTOS — todos private: quem quiser mexer usa os metodos public.
     private String nome;

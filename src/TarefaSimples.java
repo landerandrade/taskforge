@@ -12,4 +12,8 @@ public class TarefaSimples extends Tarefa {
         IO.println("Resumo da tarefa Simples");
         super.resumo();
     }
+
+    public String tipo() {
+        return "Tarefa Simples";
+    }
 }
