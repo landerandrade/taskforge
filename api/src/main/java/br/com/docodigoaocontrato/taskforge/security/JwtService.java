@@ -9,7 +9,8 @@ import java.util.Date;
 
 public class JwtService {
 
-    private static final String SEGREDO = "asdkasjdlsad-213213sdsa-21321sqd-sadas";
+    private static final String SEGREDO = System.getenv()
+            .getOrDefault("JWT_SECRET", "asdkasjdlsad-213213sdsa-21321sqd-sadas");
     private final SecretKey chave = Keys.hmacShaKeyFor(SEGREDO.getBytes(StandardCharsets.UTF_8));
 
     public String gerarToken(String email) {
