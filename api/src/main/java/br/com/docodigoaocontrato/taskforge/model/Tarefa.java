@@ -21,6 +21,12 @@ public class Tarefa {
     private Long id;
 
     private String nome;
-    private int prioridade;
-    private boolean concluida;
+    private Integer prioridade;
+    private Boolean concluida;
+
+    public Tarefa(String nome, Integer prioridade, Boolean concluida) {
+        this.nome = nome;
+        this.prioridade = prioridade;
+        this.concluida = concluida;
+    }
 }
