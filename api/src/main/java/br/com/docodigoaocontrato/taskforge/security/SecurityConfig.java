@@ -20,7 +20,7 @@ import java.util.List;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Value("${app.cors.origins=http://localhost:5173}")
+    @Value("${app.cors.origins:http://localhost:5173}")
     private String corsOrigins;
 
     private final JwtAuthFilter jwtAuthFilter;
