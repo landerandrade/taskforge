@@ -1,0 +1,1 @@
+ALTER TABLE comentario ADD COLUMN IF NOT EXISTS data_criacao TIMESTAMP;

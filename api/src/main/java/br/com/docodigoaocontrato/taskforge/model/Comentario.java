@@ -1,13 +1,12 @@
 package br.com.docodigoaocontrato.taskforge.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -21,8 +20,15 @@ public class Comentario {
     private Long id;
     private String descricao;
     private String autor;
+    private LocalDateTime dataCriacao;
 
-    public Comentario(String descricao, String autor) {
+    @PrePersist
+    public void aoCriar() {
+        this.dataCriacao = LocalDateTime.now();
+    }
+
+    public Comentario(Long id, String descricao, String autor) {
+        this.id = id;
         this.descricao = descricao;
         this.autor = autor;
     }
